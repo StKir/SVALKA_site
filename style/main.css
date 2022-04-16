@@ -24,15 +24,18 @@
   border-radius: 100px;
   background: rgb(255, 255, 255)
 }
-
+.swap-cursor1{
+  border: 2px dashed #0D0D0D;
+}
+.swap-cursor2{
+  background: #0D0D0D;
+}
 *::after,
 *::before {
   box-sizing: border-box;
 }
 
 :root {
-  --color-dark: #171717;
-  --color-main: #6d11ca;
 }
 
 .rgbKineticSlider {
@@ -78,6 +81,7 @@ body {
   overflow-x: hidden;
   cursor: none;
   background-color: #0C0C0C;
+  transition: all .5s ease-in-out;
 }
 
 h1 {
@@ -142,8 +146,8 @@ h1 {
   cursor: pointer;
   width: 244px;
   height: 63px;
-  left: 62px;
-  top: 631px;
+  /* left: 62px;
+  top: 631px; */
 
   border: 2px dashed #FFFFFF;
   border-radius: 45px;
@@ -162,8 +166,6 @@ h1 {
 .btn-inside-panel {
   width: 234px;
   height: 53px;
-  left: 67px;
-  top: 636px;
 
   background: #FFFFFF;
   border-radius: 45px;
@@ -291,6 +293,7 @@ h1 {
 }
 .txt-offer__animation-txt{
   position: relative;
+  height: 108px;
 }
 .animation-txt-intro2{
   width: max-content;
@@ -302,4 +305,179 @@ h1 {
   width: max-content;
   left: 2000px;
   position: absolute;
+}
+.autor-about__intro{
+  margin-top: 15px;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 18px;
+  line-height: 22px;
+  text-transform: uppercase;
+  max-width: 433px;
+  color: #FFFFFF;
+}
+.btntype2{
+  border: 2px dashed #FFFFFF;
+  border-radius: 45px;
+  padding: 3px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all .5s ease-in-out;
+}
+.btninside{
+  width: 234px;
+  height: 53px;
+  cursor: pointer;
+  background: #FFFFFF;
+  border-radius: 45px;
+  text-decoration: none;
+  text-transform: uppercase;
+  color: #0D0D0D;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 18px;
+  line-height: 22px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: all .5s ease-in-out;
+}
+.btninside:hover{
+  background:#0C0C0C;
+  color:#FFFFFF;
+}
+.btntype2:hover{
+  transform: translateY(-5px);
+}
+.vk-btn{
+  max-width: 136px;
+}
+.vk-btn a{
+  width: 126px;
+}
+.email-btn a{
+  width: 351px;
+}
+.autro-about__btns{
+  display: flex;
+  max-width: 100%;
+  height: auto;
+  justify-content: space-between;
+  margin-top: 30px;
+}
+.section-what-interesting{
+  padding-top: 80px;
+}
+.tablet-href{
+  max-width: 100%;
+  height: 225px;
+  border: 1px solid #0D0D0D;
+  box-sizing: border-box;
+  display: flex;
+  justify-content: space-between;
+}
+.what-interesting__white-swap{
+  color: #0D0D0D;
+}
+.white-style{
+  background-color: #F2F2F2;
+  transition: all .5s ease-in-out;
+}
+.what-interesting__white-swap{
+  margin-bottom: 60px;
+}
+.tablet-href__place{
+  width: 433px;
+  padding: 30px 0 0 30px;
+  height: 100%;
+  border: 1px solid #0D0D0D;
+  box-sizing: border-box;
+  text-decoration: none;
+  transition: all .5s ease-in-out;
+}
+.tablet-href__place__txt{
+  display: block;
+  width: 244px;
+  font-weight: 500;
+  font-size: 32px;
+  line-height: 39px;
+  text-transform: uppercase;
+  color: #0D0D0D;
+  margin-bottom: 30px;
+  transition: all .5s ease-in-out;
+}
+.tablet-href__place:hover > .tablet-href__place__txt, svg{
+  font-size: 40px;
+}
+.content-txt-offer__sections{
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 19px;
+  text-transform: uppercase;
+  color: #9A9A9A;
+  margin-bottom: 15px;
+  display: block;
+}
+.content-txt-offer__title{
+  font-family: Lozung;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 48px;
+  line-height: 53px;
+  color: #0D0D0D;
+  max-width: 425px;
+  margin-bottom: 15px;
+}
+.content-txt-offer__btns{
+  display: flex;
+  justify-content: space-between;
+  width: 325px;
+}
+.black-type{
+  border: 2px dashed #0D0D0D;
+}
+.black-btninside{
+  background: #0D0D0D;
+  color: #fff;
+}
+.black-type:hover > .black-btninside{
+  background: #fff;
+  color: #0D0D0D;
+}
+.icon-wrp-blackType{
+  border: 2px dashed #000000;
+  border-radius: 45px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 5px;
+  transition: all .5s ease-in-out;
+}
+.icon-wrp-blackType:hover{
+  transform: translateY(-5px);
+}
+.content-img{
+  perspective: 1000;
+  position: relative;
+  max-width: 887px;
+  height: auto;
+  box-shadow: 5px 5px 10px 1px rgba(0, 0, 0, 0.25);
+}
+.content-img img{
+  max-width: 100%;
+  height: auto;
+}
+.section-locmotive{
+  margin-top: 150px;
+}
+.locomotive-content{
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+  margin-bottom: 100px;;
+}
+.content-txt-offer{
+  opacity: 0;
+  transform: rotate(45deg);
 }
