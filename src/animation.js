@@ -1,10 +1,4 @@
-// functions
-function offset(el) {
-    const rect = el.getBoundingClientRect(),
-        scrollLeft = window.pageXOffset || document.documentElement.scrollLeft,
-        scrollTop = window.pageYOffset || document.documentElement.scrollTop;
-    return { top: rect.top + scrollTop, left: rect.left + scrollLeft }
-}
+gsap.registerPlugin(ScrollTrigger);
 // end
 
 // anim-loading
@@ -14,6 +8,26 @@ function offset(el) {
 //anim-start
 
 //end
+//anim-blocks
+const animStyleOne = document.querySelectorAll('.anim-style-1');
+const btnTypeAnimation = document.querySelectorAll('.btntype2');
+
+
+animStyleOne.forEach(el => {
+    gsap.from(el, {
+        scrollTrigger:{
+            trigger: el,
+        },
+        y: 50,
+        opacity: 0,
+        duration: 0.5,
+        ease: "slow(0.7, 0.7, false)",
+    })
+})
+
+
+//end
+
 
 document.addEventListener('mousemove', (e) => {
     gsap.to('.cursor1', {
@@ -33,6 +47,8 @@ document.addEventListener('mousemove', (e) => {
         position: 'fixed',
     })
 })
+
+
 gsap.from('.social-icon', {
     x:-500,
     rotate: 50,
@@ -55,27 +71,31 @@ gsap.from('.overlay-menu', {
     stagger: .2,
 })
 gsap.from('.main-offer__h1', {
-    x: -1000,
+    opacity: 0,
+    y: 10,
     duration: 1,
     delay: .5,
     stagger: .2,
     ease: "slow(0.7, 0.7, false)",
 })
-// const sectionAnimateOffer = document.querySelector('.section-txt-offer');
-// sectionAnimateOffer.addEventListener('mouseout', () => {
-//     gsap.to('.animation-txt-intro', {
-//         left: -20000,
-//         duration: 40,
-//         ease: 'none',
-//     })
-//     gsap.to('.animation-txt-intro2', {
-//         right: -20000,
-//         duration: 40,
-//         ease: 'none',
-//     })
-// })
-// anim-background
+gsap.from('.btn-type1', {
+    opacity: 0,
+    delay: .5,
+    duration: 1,
+    ease: "none",
+})
+gsap.from('.main-offer__nav-menu a', {
+    opacity: 0,
+    duration: 1,
+    delay: .5,
+    stagger: .2,
+    ease: "slow(0.7, 0.7, false)",
+})
+
+
+
 const setionLock = document.querySelector('.section-what-interesting');
+const setionBack = document.querySelector('.section-form');
 
 let backgroundChange = false;
 
@@ -83,7 +103,7 @@ const bodyForChangeColor = document.querySelector('body');
 const cursorOne = document.querySelector('.cursor1'),
       cursorTwo = document.querySelector('.cursor');
 window.addEventListener('scroll', () => {
-    if(scrollY > offset(setionLock).top - 300){
+    if(scrollY > offset(setionLock).top - 400 && scrollY < offset(setionBack).top -400){
         backgroundChange = true;
     } 
     else {backgroundChange = false};
@@ -101,12 +121,10 @@ window.addEventListener('scroll', () => {
 })
 
 // anim-locomotive
-gsap.registerPlugin(ScrollTrigger);
 const contentTxtOffer = document.querySelectorAll('.content-txt-offer');
       contentImgOffer = document.querySelectorAll('.content-img');
 
 contentTxtOffer.forEach(el => {
-    console.log(el.children);
     gsap.to(el, {
         scrollTrigger: {
             trigger: el,
@@ -147,3 +165,11 @@ document.addEventListener('mousemove', (e) => {
         })
 })
 //end
+
+// functions
+function offset(el) {
+    const rect = el.getBoundingClientRect(),
+        scrollLeft = window.pageXOffset || document.documentElement.scrollLeft,
+        scrollTop = window.pageYOffset || document.documentElement.scrollTop;
+    return { top: rect.top + scrollTop, left: rect.left + scrollLeft }
+}
