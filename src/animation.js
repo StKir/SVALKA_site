@@ -1,11 +1,135 @@
 gsap.registerPlugin(ScrollTrigger);
-// end
 
-// anim-loading
+//loader
+let mask = document.querySelector('.load');
+    window.addEventListener('load', ()=>{
+    mask.classList.add('hide-preloader');
+    });
+setTimeout(() => {mask.remove();}, 1000);
+//end
+
+
+// anim-change-color
+
+const setionLock = document.querySelector('.section-what-interesting');
+const setionBack = document.querySelector('.section-form');
+
+let backgroundChange = false;
+
+const bodyForChangeColor = document.querySelector('body');
+const cursorOne = document.querySelector('.cursor1'),
+      cursorTwo = document.querySelector('.cursor');
+window.addEventListener('scroll', () => {
+    if(scrollY > offset(setionLock).top - 400 && scrollY < offset(setionBack).top -400){
+        backgroundChange = true;
+    } 
+    else {backgroundChange = false};
+
+    if(backgroundChange == true){
+        bodyForChangeColor.classList.add('white-style');
+        cursorOne.classList.add('swap-cursor2');
+        cursorTwo.classList.add('swap-cursor1');
+    } else {
+        bodyForChangeColor.classList.remove('white-style');
+        cursorOne.classList.remove('swap-cursor2');
+        cursorTwo.classList.remove('swap-cursor1');
+    }
+
+})
+
+//end
+//open overlay
+const OpenOverlay = document.querySelectorAll('.overlay-menu');
+const CloseOverlay = document.querySelector('.close-modal-btn');
+const NavHrefs = document.querySelectorAll('.menu-navigation a');
+
+OpenOverlay.forEach(el => {
+    el.addEventListener('mouseover', () => {
+        gsap.to(el, {
+            y: -5,
+        })
+    })
+    el.addEventListener('mouseout', () => {
+        gsap.to(el, {
+            y: 0,
+        })
+    })
+    el.addEventListener('click', () => {
+        gsap.to('.overlay-menu-nav', {
+            delay: .5,
+            top:0,
+            ease: "slow(0.7, 0.7, false)",
+        })
+        gsap.to('body', {
+            overflow: hidden,
+        })
+    })
+})
+CloseOverlay.addEventListener('click', () => {
+    gsap.to('.overlay-menu-nav', {
+        delay: .5,
+        top: "-100%",
+        ease: "slow(0.7, 0.7, false)",
+    })
+})
+NavHrefs.forEach(el => {
+    el.addEventListener('click', () => {
+        gsap.to('.overlay-menu-nav', {
+            delay: .5,
+            top: "-100%",
+            ease: "slow(0.7, 0.7, false)",
+        })
+    })
+})
+
+//anim-start
 
 //end
 
-//anim-start
+//anim-up to menu block
+const startBlock = document.querySelector('.about__h1');
+const upToMenuBlock = document.querySelector('.up-to-menu');
+
+
+window.addEventListener('scroll', () => {
+    if(scrollY > offset(startBlock).top - 300 && screen.width > 576){
+        gsap.to(upToMenuBlock, {
+            opacity: 1,
+            duration: 0.5,
+            left: "92%",
+            zIndex: 100,
+        }) 
+    } else {
+        if(screen.width < 576 &&  scrollY > offset(startBlock).top - 300){
+            gsap.to(upToMenuBlock, {
+                opacity: 1,
+                duration: 0.5,
+                left: "75%",
+                zIndex: 100,
+            }) 
+        }
+        else {
+            gsap.to(upToMenuBlock, {
+                opacity: 0,
+                duration: 0.5,
+                left: "110%",
+                
+            }) 
+        }
+    }
+})
+upToMenuBlock.addEventListener('mouseover', ()=>{
+    gsap.to(upToMenuBlock, {
+        top: "83%",
+        duration: 0.5,
+    })
+})
+upToMenuBlock.addEventListener('mouseout', ()=>{
+    gsap.to(upToMenuBlock, {
+        top: "85%",
+        duration: 0.5,
+    })
+})
 
 //end
 //anim-blocks
@@ -94,31 +218,6 @@ gsap.from('.main-offer__nav-menu a', {
 
 
 
-const setionLock = document.querySelector('.section-what-interesting');
-const setionBack = document.querySelector('.section-form');
-
-let backgroundChange = false;
-
-const bodyForChangeColor = document.querySelector('body');
-const cursorOne = document.querySelector('.cursor1'),
-      cursorTwo = document.querySelector('.cursor');
-window.addEventListener('scroll', () => {
-    if(scrollY > offset(setionLock).top - 400 && scrollY < offset(setionBack).top -400){
-        backgroundChange = true;
-    } 
-    else {backgroundChange = false};
-
-    if(backgroundChange == true){
-        bodyForChangeColor.classList.add('white-style');
-        cursorOne.classList.add('swap-cursor2');
-        cursorTwo.classList.add('swap-cursor1');
-    } else {
-        bodyForChangeColor.classList.remove('white-style');
-        cursorOne.classList.remove('swap-cursor2');
-        cursorTwo.classList.remove('swap-cursor1');
-    }
-
-})
 
 // anim-locomotive
 const contentTxtOffer = document.querySelectorAll('.content-txt-offer');

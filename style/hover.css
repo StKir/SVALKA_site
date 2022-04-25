@@ -105,7 +105,6 @@ section a{
 	height: 100%;
 	position: relative;
 }
-
 .hover-reveal__deco {
 	width: 100%;
 	height: 100%;
@@ -137,5 +136,25 @@ section a{
 	}
 	.content__text {
 		grid-column: span 3;
+	}
+}
+@media screen and (max-width: 1300px) {
+	.hover-reveal {
+		max-width: 339px;
+		height: 254px;
+	}
+	
+  }
+@media screen and (max-width: 1300px) {
+.hover-reveal {
+	max-width: 244px;
+	max-height: 177px;
+}
+}
+@media screen and (max-width: 576px) {
+	.hover-reveal {
+		max-width: 134px;
+		max-height: 97px;
+		transform: rotate(0deg) !important;
 	}
 }

@@ -16,13 +16,74 @@
 </head>
 <body>
     <main>
+        <div class="load">
+            <div class="preloader">
+                <div class="loader"></div>
+            </div>
+        </div>
+        <div class="overlay-menu-nav">
+            <div class="container">
+                <div class="close-modal-btn">
+                    <svg width="46" height="45" viewBox="0 0 46 45" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M1.70711 1L44.7071 44M44 1L1 44" stroke="#F2F2F2"/>
+                        </svg>                        
+                </div>
+                <nav class="menu-navigation">
+                    <a href="#section-about"><h1>что это такое?</h1></a>
+                    <a href="#section-autor-about"><h1>автор</h1></a>
+                    <a href="#section-what-interesting"><h1>галлерея</h1></a>
+                    <a href="#section-form"><h1>связь</h1></a>
+                    </nav>
+                    <div class="contacts-overlay">
+                        <div class="autro-about__btns btns-overlay">
+                            <div class="btntype2">
+                                <a href="https://www.weblancer.net/users/ogkurasaki/" class="btninside">биржа</a>
+                            </div>
+                            <div class="btntype2">
+                                <a href="https://t.me/OG_Kurasaki" class="btninside">телеграм</a>
+                            </div>
+                            <div class="btntype2 vk-btn">
+                                <a href="https://vk.com/k.strukov95" class="btninside">вк</a>
+                            </div>
+                            <div class="btntype2 email-btn">
+                                <a href="kirillstrukov2@gmail.com" class="btninside">kirillstrukov2@gmail.com</a>
+                            </div>
+                            <div class="btntype2">
+                                <a href="#section-form" class="btninside">заполнить форму</a>
+                            </div>
+                        </div>
+                    </div>
+            </div>
+            
+        </div>
         <div class="cursor1"></div>
         <div class="cursor"></div>
-        <section class="first-screen">
+        <a href="#first-screen" class="up-to-menu">
+            <svg width="24" height="37" viewBox="0 0 24 37" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M13.0607 0.93934C12.4749 0.353553 11.5251 0.353553 10.9393 0.93934L1.3934 10.4853C0.807611 11.0711 0.807611 12.0208 1.3934 12.6066C1.97918 13.1924 2.92893 13.1924 3.51472 12.6066L12 4.12132L20.4853 12.6066C21.0711 13.1924 22.0208 13.1924 22.6066 12.6066C23.1924 12.0208 23.1924 11.0711 22.6066 10.4853L13.0607 0.93934ZM13.5 37L13.5 2L10.5 2L10.5 37L13.5 37Z" fill="black"/>
+            </svg>    
+        </a>
+        <section class="first-screen" id="first-screen">
             <div class="overlay-for-slider"></div>
             <div class="rgbKineticSlider" id="rgbKineticSlider"></div>
             <header class="header">
                 <div class="container">
+                    <div class="mobile-wrapper">
+                        <a href="index.html" class="logotype"><img src="img/logo.png" alt="logotype"></a>
+                        <div class="sociav-and-menu-wrp">
+                            <ul class="social">
+                                <li class="social-icon"><a href="https://vk.com/k.strukov95"><img src="img/v.png" alt="vk"></a></li>
+                                <li class="social-icon"><a href="https://t.me/OG_Kurasaki"><img src="img/tl.png" alt="vk"></a></li>
+                                <li class="social-icon"><a href="https://www.behance.net/kirillstru295f"><img src="img/beehance-logo.png" alt="vk"></a></li>
+                            </ul>
+                            <nav class="overlay-menu">
+                                <span>Меню</span>
+                                <svg width="27" height="16" viewBox="0 0 27 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M26.7071 7.29289C27.0976 7.68342 27.0976 8.31658 26.7071 8.70711L20.3431 15.0711C19.9526 15.4616 19.3195 15.4616 18.9289 15.0711C18.5384 14.6805 18.5384 14.0474 18.9289 13.6569L24.5858 8L18.9289 2.34315C18.5384 1.95262 18.5384 1.31946 18.9289 0.928932C19.3195 0.538408 19.9526 0.538408 20.3431 0.928932L26.7071 7.29289ZM0 7H26V9H0V7Z" fill="white"/>
+                                </svg>
+                            </nav>
+                        </div>
+                    </div>
                     <div class="header-wrapper">
                         <ul class="social">
                             <li class="social-icon"><a href="https://vk.com/k.strukov95"><img src="img/v.png" alt="vk"></a></li>
@@ -48,7 +109,7 @@
                         <a href="#">| айдентика |</a>
                         <a href="#">| постеры |</a>
                     </div>
-                    <div class="btn-type1">
+                    <div class="btn-type1 mgauto">
                         <a href="#section-what-interesting" class="btn-inside-panel">
                             СМОТРЕТЬ
                         </a>
@@ -70,7 +131,7 @@
                 </nav>
             </div>
         </section>
-        <section class="section-about">
+        <section class="section-about" id="section-about">
             <div class="container">
                 <div class="about-wrapper anim-style-1">
                     <h1 class="about__h1">
@@ -96,7 +157,7 @@
                 <h1 class="animation-txt-intro2">Покажи миру свой характер! Покажи миру свой характер! Покажи миру свой характер! Покажи миру свой характер! Покажи миру свой характер! Покажи миру свой характер! Покажи миру свой характер!</h1>
             </div>
         </section>
-        <section class="section-autor-about">
+        <section class="section-autor-about" id="section-autor-about">
             <div class="container">
                 <h1 class="autor-about__name anim-style-1">автор</h1>
                 <p class="autor-about__intro anim-style-1">
@@ -257,7 +318,7 @@
         </section>
         <section class="section-form" id="section-form">
             <div class="container">
-                <h1>давайте поработаем вместе?</h1>
+                <h1 class="section-form-h1">давайте поработаем вместе?</h1>
                 <form class="form-form" action="mail.php" method="POST">
                     <div class="main-form">
                         <div class="inuts-info">
