@@ -61,11 +61,14 @@ OpenOverlay.forEach(el => {
             ease: "slow(0.7, 0.7, false)",
         })
         gsap.to('body', {
-            overflow: hidden,
+            overflow: "hidden",
         })
     })
 })
 CloseOverlay.addEventListener('click', () => {
+    gsap.to('body', {
+        overflow: "visible",
+    })
     gsap.to('.overlay-menu-nav', {
         delay: .5,
         top: "-100%",
@@ -74,6 +77,9 @@ CloseOverlay.addEventListener('click', () => {
 })
 NavHrefs.forEach(el => {
     el.addEventListener('click', () => {
+        gsap.to('body', {
+            overflow: "visible",
+        })
         gsap.to('.overlay-menu-nav', {
             delay: .5,
             top: "-100%",
@@ -153,24 +159,6 @@ animStyleOne.forEach(el => {
 //end
 
 
-document.addEventListener('mousemove', (e) => {
-    gsap.to('.cursor1', {
-        left: e.clientX-3,
-        top: e.clientY-3,
-        ease: "none",
-        duration: 0,
-        display: 'block',
-        position: 'fixed',
-
-    })
-    gsap.to('.cursor', {
-        left: e.clientX-50,
-        top: e.clientY-50,
-        ease: "slow(0.7, 0.7, false)",
-        display: 'block',
-        position: 'fixed',
-    })
-})
 
 
 gsap.from('.social-icon', {

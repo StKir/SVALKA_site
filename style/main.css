@@ -1049,10 +1049,9 @@ h3{
     opacity: 1;
   }
   50%{
-    transform: rotate(180deg);
+    background: #fff;
   }
   100%{
-    transform: rotate(-180deg);
     opacity: 0;
   }
 }
@@ -1095,4 +1094,39 @@ h3{
 	100% {
 		transform: rotate(360deg)
 	}
+}
+
+.error-form{
+  border: 1px solid red;
+}
+.error-bud{
+  color: red;
+}
+.hide-inp{
+  position: absolute;
+  width: 0px;
+  height: 0px;
+}
+.thx-h1{
+  margin-top: 10%;
+  text-align: center;
+}
+.thx-p{
+  text-align: center;
+  color: #fff;
+}
+.header-thx a{
+  width: 196px;
+  height: 45px;
+  display: block;
+  cursor: pointer;
+  margin: 25px auto;
+}
+.header-thx img{
+  width: 196px;
+  height: 45px;
+  margin: 0 auto;
+}
+.thx-type{
+  margin: 25px auto;
 }

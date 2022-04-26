@@ -325,28 +325,29 @@
                             <input  name="user_name" placeholder="Ваше имя" type="text" class="info-inp">
                             <input  name="user_lastName" placeholder="Ваша фамилия" type="text" class="info-inp">
                             <input  name="user_mail" placeholder="Ваш email" type="mail" class="info-inp">
+                            <input type="text" name="price-budjet" class="hide-inp">
                         </div>
                         <textarea placeholder="напишите пару строк о проекте" name="comment" class="comment-txt" cols="30" rows="10"></textarea>
                     </div>
                     <span class="budjet">Бюджет</span>
-                    <div class="form-checkboxes">
+                    <div class="form-checkboxes" data-check="">
                         <div class="form-checkbox">
-                            <input id="check-min5k" type="radio" name="price-check">
+                            <input id="check-min5k" type="radio" name="price-check" data-price="5.000руб">
                             <label class="btn-label" for="check-min5k"><5.000руб</label>
                         </div>
                         <div class="form-checkbox">
-                            <input id="check-min10k" type="radio" name="price-check">
+                            <input id="check-min10k" type="radio" name="price-check" data-price="10.000руб">
                             <label class="btn-label" for="check-min10k"><10.000руб</label>
                         </div>
                         <div class="form-checkbox">
-                            <input id="check-min25k" type="radio" name="price-check">
+                            <input id="check-min25k" type="radio" name="price-check" data-price="25.000руб">
                             <label class="btn-label" for="check-min25k"><25.000руб</label>
                         </div>
                         <div class="form-checkbox">
-                            <input id="check-more" type="radio" name="price-check">
+                            <input id="check-more" type="radio" name="price-check" data-price="больше">
                             <label class="btn-label" for="check-more">больше</label>
                         </div>
-                        <button class="btntype2 checkbox-style">Отправить</button>
+                        <button class="btntype2 checkbox-style subBtn">Отправить</button>
                     </div>
                 </form>
             </div>
@@ -362,7 +363,7 @@
         </footer>
     </main>
     
-
+    <script src="src/cursor.js"></script>
    <script src="src/TweenMax.min.js"></script>
    <script src="src/pixi.min.js"></script>
    <script src="src/rgbKineticSlider.js"></script>
@@ -371,6 +372,7 @@
    <script src="src/charming.min.js"></script>
    <script src="src/imagesloaded.pkgd.min.js"></script>
    <script src="src/hover.js"></script>
+   <script src="src/form.js"></script>
    
 </body>
 </html>
